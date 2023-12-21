@@ -18,9 +18,7 @@ html{
     background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: contain, contain;
-    background-position: top -450px left -250px, 
-                         bottom -550px right -200px;
-
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 body{
     font-family: var(--f1-font);
@@ -73,7 +71,7 @@ text-align: center;  padding: 25px;  padding-top: 70px;
 /* Media Rules */
 @media screen and (max-width: 375px) {
     html{
-        background-position: top -166px left -123px, bottom 53px right -183px;                            
+        background-position: right 50vw bottom 65vh, left 48vw top 52vh;
     }
     main .container{
         width: 325px;
