@@ -1,0 +1,82 @@
+/* Start Variables */
+:root {
+    /* Fonts */
+    --f1-font: 'Kumbh Sans', sans-serif;
+    /* Primary Colors  */
+    --c1-color: hsl(185, 75%, 39%);
+    --c2-color:  hsl(229, 23%, 23%);
+    --c3-color: hsl(227, 10%, 46%);
+    /* Neutral Colors */
+    --c4-color: hsl(0, 0%, 59%);
+}
+/* End Variables */
+
+/* Start Global Rules */
+*{margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+html{
+    background-color: var(--c1-color);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: top -450px left -250px, 
+                         bottom -550px right -200px;
+
+}
+body{
+    font-family: var(--f1-font);
+    min-height: 100vh; display: flex; justify-content: center; align-items: center;
+}
+/* End Global Rules */
+main{box-shadow: 0 0 1.675rem #05050524;}
+main .container{
+    width: 350px;   margin: 0 auto;
+    display: flex;  
+}
+.card{background-color: white; border-radius: 12.5px;} 
+.card-head{position: relative;}
+.card-head #cover{
+    border-radius: 12.5px 12.5px 0 0;
+    width: 100%;
+}
+.card-head #personal-img{
+    position: absolute;  left: 50%;  top: 50%;
+    transform: translate(-50%, 15%);
+    border-radius: 50%; border: 4px solid white;
+}
+.card-body{
+text-align: center;  padding: 25px;  padding-top: 70px;
+}
+.card-body .name{
+    font-size: 18px; font-weight: 700; color: var(--c2-color);  margin-right: 6px;
+}
+.card-body .age{
+    color: var(--c3-color);  font-size: 17px;
+}
+.card-body .city{
+    font-size: 14px;  color: var(--c3-color);  margin-top: 8px; display: block;
+}
+.card-footer{border-top: 1px solid hsla(0, 0%, 59%, 0.25);}
+.card-footer .stats{
+    display: flex;  justify-content: space-around;
+    text-align: center;  padding: 25px;
+}
+.card-footer .stats > p{
+    display: flex;  flex-direction: column;
+}
+.card-footer .stats > p span:first-child{
+    font-size: 18px;  font-weight: 700;  margin-bottom: 5px;  color: var(--c2-color);
+}
+.card-footer .stats > p span:last-child{
+    font-size: 10px;  letter-spacing: 1.5px;  color: var(--c3-color);
+}
+
+/* Media Rules */
+@media screen and (max-width: 375px) {
+    html{
+        background-position: top -166px left -123px, bottom 53px right -183px;                            
+    }
+    main .container{
+        width: 325px;
+    }
+
+}
